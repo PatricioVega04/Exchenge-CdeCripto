@@ -1,14 +1,22 @@
-import { createStore } from 'vuex'
+
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
-  },
-  getters: {
+    userId: localStorage.getItem("userId") || null
   },
   mutations: {
+    setUserId(state, id) {
+      state.userId = id;
+      localStorage.setItem("userId", id); // Guardar en localStorage
+    },
+    logout(state) {
+      state.userId = null;
+      localStorage.removeItem("userId"); // Eliminar ID guardado
+    }
   },
-  actions: {
-  },
-  modules: {
+  getters:{
+    getUserId:(state) =>state.userId
   }
-})
+});
+
