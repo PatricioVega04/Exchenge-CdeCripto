@@ -1,13 +1,13 @@
 <template>
     <header class="header">
-        <div class="logo">
+        <router-link to="/entry" class="logo">
             <img src="../assets/logo.jpg" alt="Logo" class="imgLogo">
             <h1><strong class="text-1">C DE </strong><strong class="text-2">C</strong><strong class="text-1">RIPTO</strong></h1>
-        </div>
+        </router-link>
         <nav class="nav">
             <ul>
-                <li><router-link to="/initial" active-class="active">Tus Criptomonedas</router-link></li>
-                <li><router-link to="/buy-crypto" active-class="active">Comprar</router-link></li>
+                <li><router-link to="/assets" active-class="active">Tus Criptomonedas</router-link></li>
+                <li><router-link to="/buy-cripto" active-class="active">Comprar</router-link></li>
                 <li><router-link to="/sell-crypto" active-class="active">Vender</router-link></li>
                 <li><router-link to="/history" active-class="active">Historial</router-link></li>
             </ul>
@@ -57,6 +57,8 @@ const logout = () => {
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .imgLogo {

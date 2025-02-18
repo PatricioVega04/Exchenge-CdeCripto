@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: 'https://labor3-d60e.restdb.io/rest/',
+    baseURL: 'https://laboratorio3-5459.restdb.io/rest/',
     headers: {
-        'x-apikey': '64a2e9bc86d8c525a3ed8f63'
+        'x-apikey': '64a57c2b86d8c50fe6ed8fa5'
     }
 });
 
@@ -12,7 +12,17 @@ export const getUserTransactions = async (userId) => {
         const response = await apiClient.get(`/transactions?q={"user_id": "${userId}"}`);
         return response.data;
     } catch (error) {
-        console.error('Error para obtener las transacciones del usuaro', error);
+        console.error('Error para obtener las transacciones del usuario', error);
+        throw error;
+    }
+};
+
+export const createTransaction = async (transaction) => {
+    try {
+        const response = await apiClient.post('/transactions', transaction);
+        return response.data;
+    } catch (error) {
+        console.error('Error al crear la transacción', error);
         throw error;
     }
 };
@@ -27,4 +37,4 @@ export const getCryptoPrice = async (exchange, crypto) => {
     }
 };
 
-export default  apiClient;
+export default apiClient;
