@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import apiClient from '@/services/apiClient';
+import CriptoService from '@/services/CriptoService';
 
 export const useCryptoBalanceStore = defineStore('cryptoBalance', {
     state: () => ({
@@ -7,8 +7,6 @@ export const useCryptoBalanceStore = defineStore('cryptoBalance', {
             btc: 0,
             eth: 0,  
             usdt: 0,
-            pepe: 0,
-            xrp: 0,
         },
         loading: false,
         error: true,
@@ -40,7 +38,7 @@ export const useCryptoBalanceStore = defineStore('cryptoBalance', {
 
         async fetchTransactions(userName) {
             try {
-                const response = await apiClient.get(`/transactions?q={"user_id": "${userName}"}`);
+                const response = await CriptoService.get(`/transactions?q={"user_id": "${userName}"}`);
                 return response.data;
             } catch (error) {
                 throw new Error('Error al obtener las transacciones: ' + error.message);
@@ -51,8 +49,6 @@ export const useCryptoBalanceStore = defineStore('cryptoBalance', {
             this.balances.btc = 0;
             this.balances.eth = 0;
             this.balances.usdt = 0;
-            this.balances.pepe = 0;
-            this.balances.xrp = 0;
         },
 
         processTransactions(transactions) {

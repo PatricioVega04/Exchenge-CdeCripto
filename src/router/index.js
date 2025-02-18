@@ -7,6 +7,7 @@ import BuyCriptoView from '@/views/BuyCriptoView.vue'
 import HistoryView from '@/views/HistoryView.vue'
 import TransactionDetailView from '@/views/TransactionDetailView.vue';
 import TransactionEditView from '@/views/TransactionEditView.vue'
+import SellView from '@/views/SellView.vue'
 
 const routes = [
   {
@@ -28,6 +29,12 @@ const routes = [
     path: '/buy-cripto',
     name: 'BuyCripto',
     component: BuyCriptoView
+  },
+  { path: '/sell-cripto',
+    name: 'SellCripto',
+    component: SellView
+
+
   },
   {
     path:'/history',

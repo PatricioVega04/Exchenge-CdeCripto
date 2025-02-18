@@ -8,7 +8,7 @@
             <ul>
                 <li><router-link to="/assets" active-class="active">Tus Criptomonedas</router-link></li>
                 <li><router-link to="/buy-cripto" active-class="active">Comprar</router-link></li>
-                <li><router-link to="/sell-crypto" active-class="active">Vender</router-link></li>
+                <li><router-link to="/sell-cripto" active-class="active">Vender</router-link></li>
                 <li><router-link to="/history" active-class="active">Historial</router-link></li>
             </ul>
         </nav>
