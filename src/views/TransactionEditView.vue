@@ -15,7 +15,7 @@
 <style scoped>
 .container {
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
 </style>

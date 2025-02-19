@@ -81,7 +81,6 @@ h1 {
     color: #410677;
 }
 
-/* Estilos para la navegación */
 .nav ul {
     display: flex;
     list-style: none;
@@ -106,7 +105,6 @@ h1 {
     color: #410677;
 }
 
-/* Estilos para el menú de usuario */
 .dropdown {
     position: relative;
     cursor: pointer;

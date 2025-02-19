@@ -53,7 +53,6 @@ const fetchTransaction = async () => {
 
 const formatDatetime = (datetime) => {
     const date = new Date(datetime);
-    // Verificar si la fecha es válida
     if (!isNaN(date.getTime())) {
         return date.toLocaleString('es-ES', { 
             dateStyle: 'short', 

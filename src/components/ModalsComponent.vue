@@ -1,5 +1,5 @@
 <template>
-    <!-- Modal de Carga -->
+    
     <div v-if="loading" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-message">
@@ -9,7 +9,6 @@
         </div>
     </div>
 
-    <!-- Modal de Éxito -->
     <div v-if="showSuccess" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-message">
@@ -20,7 +19,6 @@
         </div>
     </div>
 
-    <!-- Modal de Error -->
     <div v-if="showError" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-message">

@@ -47,7 +47,6 @@ const successModal = ref(false);
 const errorModal = ref(false);
 const formError = ref('');
 
-// Cargar precios al montar el componente
 onMounted(async () => {
     try {
         await cryptoPricesStore.fetchPrices();
@@ -56,7 +55,6 @@ onMounted(async () => {
     }
 });
 
-// Obtener precio de la criptomoneda seleccionada
 const fetchCryptoPrice = () => {
     if (!crypto.value) return;
 
@@ -70,14 +68,12 @@ const fetchCryptoPrice = () => {
     }
 };
 
-// Actualizar total a pagar en ARS
 const updatePrice = () => {
     totalPaid.value = amount.value && unitPrice.value 
         ? (amount.value * unitPrice.value).toFixed(2)
         : 0;
 };
 
-// Resetear formulario
 const resetForm = () => {
     crypto.value = '';
     amount.value = '';

@@ -14,7 +14,8 @@
         <i class="fab fa-youtube"></i>
       </a>
     </div>
-    <p>@Casi todos los derechos reservados</p>
+    <p>Casi todos los derechos reservados...</p>
+     <p>@Patriciovega037@gmail.com</p>
     </footer>
 </template>
 <script setup>
@@ -42,7 +43,7 @@ footer {
 }
 
 .social-icon:hover {
-  color: #c8a2c8; /* Color lila al hacer hover */
+  color: #c8a2c8; 
 }
 
 p {

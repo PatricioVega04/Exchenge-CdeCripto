@@ -1,5 +1,5 @@
 <template>
-<div> 
+<div container> 
     <HeaderApp/>
     <BuyComponent/>
     <FooterApp/>
@@ -9,9 +9,12 @@
 import HeaderApp from '@/components/HeaderApp.vue';
 import BuyComponent from '@/components/BuyComponent.vue';
 import FooterApp from '@/components/FooterApp.vue';
-
-
 </script>
-<style>
+<style scoped>
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
 
 </style>
